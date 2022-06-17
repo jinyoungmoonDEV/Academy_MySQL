@@ -1,0 +1,46 @@
+show tables;
+use shapdb;
+show tables;
+
+select * from producttbl;
+select memberName, memberAddress from membertbl;
+select * from membertbl;
+select * from membertbl where memberName = '당탕이'; -- 주석
+/* mysql
+여러줄주석.
+*/
+-- 한줄주석
+# 한줄 주석
+create table `my_table`(
+id int not null,
+name varchar(10)
+);
+
+drop table my_table;
+
+create table indexTBL (first_name varchar(14), last_name varchar(16), hire_date date);
+Insert INTO indexTbL
+SELECT first_name, last_name, hire_date
+FROM employees.employees
+LIMIT 500;
+select *from indexTBL;
+
+select * from indextbl where first_name = 'Mary';
+
+create index idx_indextbl_firstname ON indextbl(first_name);
+
+select * from indextbl where first_name = 'Mary';
+
+
+create table indexTBL (first_name varchar(14), last_name varchar(16), hire_date date, primary key(first_name, last_name));
+Insert INTO indexTbL
+SELECT first_name, last_name, hire_date
+FROM employees.employees
+LIMIT 500;
+select *from indexTBL;
+
+select * from indextbl where first_name = 'Mary';
+
+create index idx_indextbl_firstname ON indextbl(first_name);
+
+select * from indextbl where first_name = 'Mary';

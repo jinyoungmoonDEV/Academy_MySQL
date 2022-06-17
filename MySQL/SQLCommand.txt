@@ -1,0 +1,5 @@
+use ...;
+show ...;
+select ...;
+select * from ...;
+select version();
